@@ -1,0 +1,20 @@
+[package]
+name = "axum-api-test"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[[bin]]
+name = "axum-api-test"
+path = "src/framework/startup/main.rs"
+
+[lib]
+name = "axum_api_test_lib"
+path = "src/lib.rs"
+
+[dependencies]
+axum = "0.4.3"
+hyper = { version = "0.14", features = ["full"] }
+tokio = { version = "1", features = ["full"] }
+tower = "0.4"
+serde = { version = "1.0", features = ["derive"] }
